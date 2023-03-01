@@ -26,8 +26,6 @@
 
 ## Todo
 
-* No trae size en producción, talvez por el http
-
 ## Referencias
 
 * [Optimización de imágenes](https://cloudinary.com/documentation/image_optimization)

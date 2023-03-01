@@ -21,9 +21,7 @@ const useOptimizedImage = (image: Image) => {
     }
 
     const fixImageURL = () => {
-        setTimeout(() => {
-            setOptimizedURL(image.optimizedURL + ".png");
-        }, 500);
+        setOptimizedURL(image.optimizedURL + ".png");
     }
 
     useEffect(updateImageSize, []);

@@ -27,7 +27,7 @@ const getWebsiteImages = async (url: string): Promise<WebsiteImages> => {
         const imageURL = getFullImageURL(url, imageSrc);
         const imageName = imageURL.split("/").at(-1) || "";
         const imageSize = await getImageSize(imageURL);
-        const optimizedImageURL = optimizeImage(imageURL);
+        const optimizedImageURL = await optimizeImage(imageURL);
         return {
             name: imageName,
             originalURL: imageURL,
