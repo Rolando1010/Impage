@@ -9,7 +9,7 @@ const useOptimizedImage = (image: Image) => {
     const updateImageSize = () => {
         let tries = 0;
         const intervalID = setInterval(() => {
-            fetch(optimizedURL.replace("http://", "https://")).then(response => {
+            fetch(optimizedURL).then(response => {
                 if(response.ok) clearInterval(intervalID);
                 else return;
                 if(tries++ === 10) {
@@ -27,11 +27,7 @@ const useOptimizedImage = (image: Image) => {
 
     const fixImageURL = () => {
         const extension = "." + image.name.split(".").at(-1);
-        // if(optimizedURL.slice(optimizedURL.length - extension.length) === extension){
-            // setOptimizedURL(image.optimizedURL);
-        // } else {
-            setOptimizedURL(image.optimizedURL + extension);
-        // }
+        setOptimizedURL(image.optimizedURL + extension);
     }
 
     useEffect(updateImageSize, []);
