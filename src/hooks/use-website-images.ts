@@ -9,16 +9,19 @@ const useWebsiteImages = () => {
     const { url: originalURL } = router.query;
     const url = useMemo(() => queryStringToString(originalURL), [originalURL]);
     const [websiteImages, setWebsiteImages] = useState<WebsiteImages | null>(null);
+    const [isLoading, setIsLoading] = useState(false);
 
     useEffect(() => {
         if(url){
+            setIsLoading(true);
             requests
-               .get<WebsiteImages>(`/api/website-images?url=${url}`)
-                .then(setWebsiteImages);
+                .get<WebsiteImages>(`/api/website-images?url=${url}`)
+                .then(setWebsiteImages)
+                .finally(() => setIsLoading(false));
         }
     }, [url]);
 
-    return {url, websiteImages};
+    return { url, websiteImages, isLoading };
 }
 
 export default useWebsiteImages;

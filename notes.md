@@ -27,7 +27,8 @@
 ## Todo
 
 * Poner loader
-* Validar URL
+* Meter ejemplos
+* README.md
 
 ## Referencias
 
