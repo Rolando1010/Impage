@@ -7,10 +7,15 @@ const useOptimizedImage = (image: Image) => {
     const [downloadable, setDownloadable] = useState(image.optimizedURL);
 
     const updateImageSize = () => {
+        let tries = 0;
         const intervalID = setInterval(() => {
             fetch(optimizedURL.replace("http://", "https://")).then(response => {
                 if(response.ok) clearInterval(intervalID);
                 else return;
+                if(tries++ === 10) {
+                    clearInterval(intervalID);
+                    return;
+                }
                 response.blob().then(blob => {
                     setOptimizedSize(blob.size);
                     setDownloadable(URL.createObjectURL(blob));
