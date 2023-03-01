@@ -17,7 +17,9 @@ const generateRandomText = () => {
 
 const optimizeImage = (imageURL: string) => {
     const publicID = generateRandomText();
-    cloudinary.uploader.upload(imageURL, {public_id: publicID});
+    cloudinary.uploader.upload(imageURL, {public_id: publicID})
+        .then(() => console.log("uploaded", imageURL))
+        .catch(() => console.log("failed to upload", imageURL))
     const optimizedImage = cloudinary
         .image(publicID, {quality: "auto:low"})
         .split("'")[1];
