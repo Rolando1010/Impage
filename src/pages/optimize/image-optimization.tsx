@@ -4,12 +4,7 @@ import useOptimizedImage from "src/hooks/use-optimized-image";
 import ImageTransition from "./image-transition";
 
 const ImageOptimization = ({ image }: { image: Image }) => {
-    const {
-        optimizedSize,
-        optimizedURL,
-        downloadable,
-        fixImageURL
-    } = useOptimizedImage(image);
+    const { downloadable } = useOptimizedImage(image);
 
     return (
         <section className={styles.websiteImageContainer}>
@@ -22,9 +17,8 @@ const ImageOptimization = ({ image }: { image: Image }) => {
             <ImageTransition
                 originalURL={image.originalURL}
                 originalSize={image.originalSize}
-                optimizedURL={optimizedURL}
-                optimizedSize={optimizedSize}
-                onOptimizedError={fixImageURL}
+                optimizedURL={image.optimizedURL}
+                optimizedSize={image.optimizedSize}
             />
         </section>
     );

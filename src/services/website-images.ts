@@ -28,12 +28,13 @@ const getWebsiteImages = async (url: string): Promise<WebsiteImages> => {
         const imageName = imageURL.split("/").at(-1) || "";
         const imageSize = await getImageSize(imageURL);
         const optimizedImageURL = await optimizeImage(imageURL);
+        const optimizedImageSize = await getImageSize(optimizedImageURL);
         return {
             name: imageName,
             originalURL: imageURL,
             originalSize: imageSize,
             optimizedURL: optimizedImageURL,
-            optimizedSize: 0
+            optimizedSize: optimizedImageSize
         }
     }));
     return {
