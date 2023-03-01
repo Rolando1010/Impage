@@ -26,7 +26,6 @@
 
 ## Todo
 
-* Poner loader
 * Meter ejemplos
 * README.md
 
