@@ -1,0 +1,20 @@
+.navbar {
+    padding: 10px 15px;
+    background-color: var(--background-2);
+}
+
+.homeLink {
+    gap: 5px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--font-color-1);
+}
+
+.homeLink h2 {
+    margin: 0;
+}
+
+.homeLink img {
+    width: 40px;
+}

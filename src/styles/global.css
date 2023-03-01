@@ -1,0 +1,16 @@
+:root {
+    --background-1: #1d1d1d;
+    --background-2: #141414;
+    --primary-1: #f6821f;
+    --primary-2: #ae5d18;
+    --font-color-1: #ffffff;
+    --font-color-2: #9f9f9f;
+    --border-radius: 15px;
+}
+
+body {
+    margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: var(--background-1);
+    color: var(--font-color-1);
+}

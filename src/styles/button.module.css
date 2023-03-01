@@ -1,0 +1,13 @@
+.button {
+    background-color: var(--primary-1);
+    margin-top: 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border: 0;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+}
+
+.button:hover, .button:focus {
+    background-color: var(--primary-2);
+}

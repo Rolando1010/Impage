@@ -1,0 +1,109 @@
+.title {
+    text-align: center;
+    background: linear-gradient(to right, var(--primary-1) 0%, var(--font-color-2) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 35px 0 25px 0;
+}
+
+.urlForm {
+    width: 90%;
+    margin: auto;
+    max-width: 500px;
+    background-color: var(--background-2);
+    padding: 20px;
+    border-radius: var(--border-radius);
+    box-sizing: border-box;
+}
+
+.urlForm span {
+    font-size: 20px;
+    color: var(--font-color-2);
+}
+
+.urlForm div {
+    display: flex;
+    justify-content: space-between;
+    margin: 7px 5px 0 0;
+    gap: 10px;
+}
+
+.urlForm img {
+    width: 30px;
+}
+
+.urlForm input {
+    flex-grow: 1;
+    background-color: var(--background-1);
+    border: 0;
+    outline: none;
+    font-size: 16px;
+    color: var(--font-color-1);
+    padding: 10px 15px;
+    border-radius: var(--border-radius);
+}
+
+.urlForm button {
+    padding: 15px 25px;
+}
+
+.websiteData {
+    background-color: var(--background-2);
+    padding: 15px;
+    margin: 40px auto 0 auto;
+    border-radius: var(--border-radius);
+    width: 90%;
+    box-sizing: border-box;
+    max-width: 800px;
+}
+
+.websiteData header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-bottom: 1px solid var(--font-color-2);
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.websiteData img {
+    width: 50px;
+}
+
+.websiteData a img {
+    width: 30px;
+}
+
+.websiteData h3 {
+    margin: 0;
+}
+
+.websiteData p {
+    margin: 0;
+}
+
+.websiteImageContainer {
+    background-color: var(--background-2);
+    width: 90%;
+    margin: 20px auto;
+    padding: 15px;
+    box-sizing: border-box;
+    border-radius: var(--border-radius);
+}
+
+.titleContainer {
+    margin: 0;
+    padding: 0 10px 10px 10px;
+    border-bottom: 1px solid var(--font-color-2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.titleContainer h3 {
+    word-break: break-all;
+}
+
+.titleContainer img {
+    width: 45px;
+}
