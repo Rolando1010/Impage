@@ -26,12 +26,11 @@
 
 ## Todo
 
-* Meter ejemplos
-* README.md
+* No trae size en producción, talvez por el http
 
 ## Referencias
 
 * [Optimización de imágenes](https://cloudinary.com/documentation/image_optimization)
 * [SDK NodeJS](https://cloudinary.com/documentation/node_integration)
 * [Zipear](https://stackblitz.com/edit/zip-file-downloader-react)
-* [Imágen de Home](https://images4.alphacoders.com/105/thumb-1920-1058585.png)
+* [Imágen de Home](https://w.wallhaven.cc/full/j5/wallhaven-j5jpe5.jpg)

@@ -7,20 +7,29 @@ const useOptimizedImage = (image: Image) => {
     const [downloadable, setDownloadable] = useState(image.optimizedURL);
 
     const updateImageSize = () => {
-        fetch(optimizedURL).then(response => {
-            response.blob().then(blob => {
-                setOptimizedSize(blob.size);
-                setDownloadable(URL.createObjectURL(blob));
+        const intervalID = setInterval(() => {
+            fetch(optimizedURL).then(response => {
+                if(response.ok) clearInterval(intervalID);
+                else return;
+                response.blob().then(blob => {
+                    setOptimizedSize(blob.size);
+                    setDownloadable(URL.createObjectURL(blob));
+                });
             });
-        });
+        }, 500);
+        return () => clearInterval(intervalID);
     }
 
     const fixImageURL = () => {
-        const newImageURL = `${image.optimizedURL}.${image.name.split(".").at(-1)}`;
-        setOptimizedURL(newImageURL);
+        const extension = "." + image.name.split(".").at(-1);
+        if(optimizedURL.slice(optimizedURL.length - extension.length) === extension){
+            setOptimizedURL(image.optimizedURL);
+        } else {
+            setOptimizedURL(image.optimizedURL + extension);
+        }
     }
 
-    useEffect(updateImageSize, [optimizedURL]);
+    useEffect(updateImageSize, []);
     
     return {
         optimizedSize,
