@@ -5,7 +5,7 @@ const useOptimizedImage = (image: Image) => {
     const [downloadable, setDownloadable] = useState(image.optimizedURL);
 
     const updateDownloadableSize = () => {
-        fetch(image.optimizedURL.replace("http://", "https://")).then(response => {
+        fetch(image.optimizedURL).then(response => {
             response.blob().then(blob => {
                 setDownloadable(URL.createObjectURL(blob));
             });

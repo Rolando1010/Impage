@@ -21,7 +21,7 @@ const optimizeImage = async (imageURL: string) => {
     const optimizedImage = cloudinary
         .image(publicID, {quality: "auto:low"})
         .split("'")[1];
-    return optimizedImage;
+    return optimizedImage.replace("http://", "https://");
 }
 
 export {
