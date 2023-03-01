@@ -1,12 +1,15 @@
 .navbar {
     padding: 10px 15px;
     background-color: var(--background-2);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .homeLink {
-    gap: 5px;
     display: flex;
     align-items: center;
+    gap: 5px;
     text-decoration: none;
     color: var(--font-color-1);
 }
@@ -17,4 +20,14 @@
 
 .homeLink img {
     width: 40px;
+}
+
+.link {
+    color: var(--font-color-1);
+    text-decoration: none;
+}
+
+.link:hover, .link:focus {
+    text-decoration: underline;
+    color: var(--font-color-2);
 }

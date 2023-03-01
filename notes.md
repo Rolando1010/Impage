@@ -26,10 +26,7 @@
 
 ## Todo
 
-* Sacar credenciales del repositorio
-* Cambiar nombres a Impage
 * Poner loader
-* Poner links en menú
 * Validar URL
 
 ## Referencias

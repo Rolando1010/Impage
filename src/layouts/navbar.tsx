@@ -8,6 +8,7 @@ const Navbar = () => {
                 <img src="/icon.png"/>
                 <h2>Impage</h2>
             </Link>
+            <Link href="/optimizar" className={styles.link}>Optimizar</Link>
         </header>
     </>);
 }
