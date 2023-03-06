@@ -18,11 +18,16 @@ const Optimize = () => {
 
 const ErrorMessage = () => {
     return (<>
-        <p>No se pudieron extraer las imágenes del sitio web.</p>
+        <p>
+            <img src="/danger.svg"/>
+            No se pudieron extraer las imágenes del sitio web.
+        </p>
         <style jsx>{`
             p {
-                margin: 0;
-                text-align: center;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                justify-content: center;
                 background-color: var(--danger-1);
                 margin: 20px;
                 padding: 20px 15px;
