@@ -8,7 +8,7 @@ const URLForm = ({ url }: { url: string }) => {
                 <span>URL:</span>
                 <div>
                     <img src="/link.svg"/>
-                    <input defaultValue={url} type="url" name="url"/>
+                    <input defaultValue={url} type="url" name="url" placeholder="https://cloudinary.com"/>
                 </div>
             </label>
             <center>
