@@ -26,8 +26,6 @@
 
 ## Todo
 
-* Mensaje de error por si falla la api
-
 ## Referencias
 
 * [Optimización de imágenes](https://cloudinary.com/documentation/image_optimization)

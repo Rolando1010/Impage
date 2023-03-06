@@ -1,6 +1,6 @@
 import { getImageSize } from "src/utils/image";
 
-const getServerSideProps = async () => {
+const getStaticProps = async () => {
     const exampleURL = "https://res.cloudinary.com/dltopb6qv/image/upload/example.jpg";
     const optimizedURL = "https://res.cloudinary.com/dltopb6qv/image/upload/q_auto:low/example.jpg";
     const [exampleSize, optimizedSize] = await Promise.all([
@@ -16,7 +16,7 @@ const getServerSideProps = async () => {
 }
 
 export {
-    getServerSideProps
+    getStaticProps
 }
 
 export { default } from "src/pages/home";
