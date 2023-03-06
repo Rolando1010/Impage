@@ -56,7 +56,12 @@ const isURL = (url: string) => {
 
 const getFullImageURL = (websiteURL: string, imageURL: string) => {
     if(!isURL(imageURL)) {
-        return (new URL(websiteURL)).origin + (imageURL[0] === "/" ? imageURL : `/${imageURL}`);
+        const websiteURLObject = new URL(websiteURL);
+        const path = websiteURLObject.pathname;
+        return websiteURLObject.origin + (imageURL[0] === "/" ? 
+            imageURL :
+            `${path}${path.at(-1) === "/" ? imageURL : "/" + imageURL}`
+        );
     }
     return imageURL;
 }
