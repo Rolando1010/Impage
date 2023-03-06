@@ -10,6 +10,7 @@ const useWebsiteImages = () => {
     const url = useMemo(() => queryStringToString(originalURL), [originalURL]);
     const [websiteImages, setWebsiteImages] = useState<WebsiteImages | null>(null);
     const [isLoading, setIsLoading] = useState(false);
+    const [isError, setIsError] = useState(false);
 
     useEffect(() => {
         if(url){
@@ -17,11 +18,12 @@ const useWebsiteImages = () => {
             requests
                 .get<WebsiteImages>(`/api/website-images?url=${url}`)
                 .then(setWebsiteImages)
+                .catch(() => setIsError(true))
                 .finally(() => setIsLoading(false));
         }
     }, [url]);
 
-    return { url, websiteImages, isLoading };
+    return { url, websiteImages, isLoading, isError };
 }
 
 export default useWebsiteImages;
