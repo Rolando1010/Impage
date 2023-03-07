@@ -17,7 +17,10 @@ const useWebsiteImages = () => {
             setIsLoading(true);
             requests
                 .get<WebsiteImages>(`/api/website-images?url=${url}`)
-                .then(setWebsiteImages)
+                .then(response => {
+                    setWebsiteImages(response);
+                    setIsError(false);
+                })
                 .catch(() => setIsError(true))
                 .finally(() => setIsLoading(false));
         }

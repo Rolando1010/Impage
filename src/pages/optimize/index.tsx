@@ -10,9 +10,9 @@ const Optimize = () => {
     return (<>
         <h1 className={styles.title}>Optimiza las imágenes de tu sitio web</h1>
         <URLForm url={url}/>
+        <WebsiteImagesData url={url} websiteImages={websiteImages}/>
         {isLoading && <Loader/>}
         {isError && <ErrorMessage/>}
-        <WebsiteImagesData url={url} websiteImages={websiteImages}/>
     </>);
 }
 
