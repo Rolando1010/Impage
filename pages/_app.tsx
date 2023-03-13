@@ -9,6 +9,7 @@ export default ({ Component, pageProps }: AppProps) => {
             <title>Impage</title>
             <link rel="icon" href="/icon.png"/>
             <meta content="IE=edge" httpEquiv="X-UA-Compatible"/>
+            <meta name="google-site-verification" content="32l8ABxB2t4tv2prM20trl2k6PTDL561ti-vqHOtoYg"/>
             <meta name="description" content="Impage | Optimizador de imágenes de sitios web | Optimiza tu sitio web sólo ingresando el url"/>
             <meta name="keywords" content="Impage Optimizador imágenes sitios web URL"/>
             <meta property="og:title" content="Optimizador de imágenes de sitios web"/>
