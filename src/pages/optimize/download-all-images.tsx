@@ -19,7 +19,7 @@ const DownloadAllImages = ({ images }: { images: Image[] }) => {
         <div>
             <button className={buttonStyles.button} onClick={download(images)}>
                 <span>Descargar todos</span>
-                <img src="/download-dark.svg"/>
+                <img src="/download-dark.svg" alt="descargar todas las imágenes"/>
             </button>
         </div>
         <style jsx>{`

@@ -24,8 +24,8 @@ const ImageTransition = ({
             </Gutter>
             <Gutter percentage={20}>
                 <div className="arrowsContainer">
-                    <img className="right" src="/right.svg"/>
-                    <img className="down" src="/down.svg"/>
+                    <img className="right" src="/right.svg" alt="imágen optimizada a la derecha"/>
+                    <img className="down" src="/down.svg" alt="imágen optimizada abajo"/>
                 </div>
             </Gutter>
             <Gutter percentage={40}>
@@ -76,7 +76,7 @@ const ImageDetail = ({ url, size, onError }: {
     return (<>
         <p>{formatBytes(size)}</p>
         <div>
-            <img src={url} onError={onError}/>
+            <img src={url} onError={onError} alt="imágen optimizada ó imágen original a optimizar"/>
         </div>
         <style jsx>{`
             p {

@@ -11,7 +11,7 @@ const ImageOptimization = ({ image }: { image: Image }) => {
             <article className={styles.titleContainer}>
                 <h3>{image.name}</h3>
                 <a download={image.name} href={downloadable}>
-                    <img src="/download-light.svg" title="Descargar imágen"/>
+                    <img src="/download-light.svg" title="Descargar imágen" alt="descargar imágen"/>
                 </a>
             </article>
             <ImageTransition

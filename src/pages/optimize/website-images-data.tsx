@@ -20,10 +20,10 @@ const WebsiteImagesData = ({ url, websiteImages }: {
     return (<>
         <div className={styles.websiteData} ref={containerRef}>
             <header>
-                <img src={websiteImages.icon}/>
+                <img src={websiteImages.icon} alt={`ícono de ${websiteImages.title}`}/>
                 <h3>{websiteImages.title}</h3>
                 <a href={url} target="_blank" title="Ir a sitio">
-                    <img src="/redirection.svg"/>
+                    <img src="/redirection.svg" alt={`redirección a ${websiteImages.title} con imágenes a optimizar`}/>
                 </a>
             </header>
             <p>{websiteImages.description}</p>

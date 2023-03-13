@@ -5,7 +5,7 @@ const Navbar = () => {
     return (<>
         <header className={styles.navbar}>
             <Link href="/" className={styles.homeLink}>
-                <img src="/icon.png"/>
+                <img src="/icon.png" alt="ícono de Impage"/>
                 <h2>Impage</h2>
             </Link>
             <Link href="/optimizar" className={styles.link}>Optimizar</Link>

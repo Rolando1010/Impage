@@ -7,7 +7,7 @@ const URLForm = ({ url }: { url: string }) => {
             <label>
                 <span>URL:</span>
                 <div>
-                    <img src="/link.svg"/>
+                    <img src="/link.svg" alt="url de sitio web con imágenes a optimizar"/>
                     <input defaultValue={url} type="url" name="url" placeholder="https://cloudinary.com"/>
                 </div>
             </label>

@@ -19,7 +19,7 @@ const Optimize = () => {
 const ErrorMessage = () => {
     return (<>
         <p>
-            <img src="/danger.svg"/>
+            <img src="/danger.svg" alt="imágen de error de optimización"/>
             No se pudieron extraer las imágenes del sitio web.
         </p>
         <style jsx>{`

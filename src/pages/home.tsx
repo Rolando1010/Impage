@@ -28,8 +28,8 @@ const Home = ({ exampleURL, exampleSize, optimizedURL, optimizedSize }: {
                 <div className={styles.container}>
                     <p className={styles.left}><span>Original:</span> {formatBytes(exampleSize)}</p>
                     <ReactCompareSlider
-                        itemOne={<ReactCompareSliderImage src={exampleURL}/>}
-                        itemTwo={<ReactCompareSliderImage src={optimizedURL}/>}
+                        itemOne={<ReactCompareSliderImage src={exampleURL} alt="Imágen sin optimizar"/>}
+                        itemTwo={<ReactCompareSliderImage src={optimizedURL} alt="Imágen optimizada"/>}
                     />
                     <p className={styles.right}><span>Optimizada:</span> {formatBytes(optimizedSize)}</p>
                 </div>
